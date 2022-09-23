@@ -15,7 +15,7 @@ const MySearchbar = styled.div`
 	padding: 15px;
 	gap: 15px;
 	border-radius: 9999px;
-	box-shadow: 0px 0px 6px 1px rgba(204, 204, 204, 0.48);
+	box-shadow: 0 0 6px 1px rgba(204, 204, 204, 0.48);
 `;
 
 const MyInput = styled.input`
