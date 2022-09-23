@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import StyledLink from '../components/Link/StyledLink';
+
 const logo = '/logo.png';
 
 export default function HomePage() {
@@ -13,10 +15,10 @@ export default function HomePage() {
 			</Head>
 			<div>
 				<h1>Find your local expert for medical cannabis</h1>
-				<Image src={logo} alt={logo} width="100px" height="100px" />
+				<Image src={logo} alt={'mycannabisguide'} width="100px" height="100px" />
 				<h2>Where do you want to find a cannabis expert?</h2>
-				<Link href="/search">
-					<button>enter your search here</button>
+				<Link href="/search" passHref>
+					<StyledLink>enter search here</StyledLink>
 				</Link>
 			</div>
 		</>
