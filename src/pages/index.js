@@ -16,7 +16,7 @@ export default function HomePage() {
 			<div>
 				<h1>Find your local expert for medical cannabis</h1>
 				<Image src={logo} alt={'mycannabisguide'} width="100px" height="100px" />
-				<h2>Where do you want to find a cannabis expert?</h2>
+				<h2>Where do you want to find your guide?</h2>
 				<Link href="/search" passHref>
 					<StyledLink>enter search here</StyledLink>
 				</Link>
