@@ -2,14 +2,14 @@ import Head from 'next/head';
 
 import Layout from '../components/Layout';
 
-export default function AboutPage() {
+export default function Search() {
 	return (
 		<Layout>
 			<Head>
-				<title key="title">About</title>
+				<title key="title">Search</title>
 				<meta key="description" name="description" content="About" />
 			</Head>
-			<h1>About</h1>
+			<h1>Search</h1>
 		</Layout>
 	);
 }
