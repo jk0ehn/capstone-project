@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledLink = styled.div`
+const StyledLink = styled.a`
 	width: 500px;
 	max-width: 600px;
 	padding: 15px;
