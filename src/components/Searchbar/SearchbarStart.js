@@ -11,7 +11,7 @@ const MySearchbar = styled.div`
 	flex-direction: row;
 	width: 500px;
 	max-width: 600px;
-	margin: 20px;
+	margin: 0 20px 0 20px;
 	padding: 15px;
 	gap: 15px;
 	border-radius: 9999px;
@@ -30,7 +30,7 @@ export default function Searchbar() {
 		<Wrapper>
 			<MySearchbar>
 				<SearchRoundedIcon color="action" />
-				<MyInput placeholder="Enter your locating here" />
+				<MyInput placeholder="Enter your location here" />
 			</MySearchbar>
 		</Wrapper>
 	);
