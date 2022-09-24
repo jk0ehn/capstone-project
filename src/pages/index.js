@@ -8,7 +8,7 @@ import Searchbar from '../components/Searchbar/Searchbar';
 
 const logo = '/logo.png';
 
-const A = styled.a`
+const Anchor = styled.a`
 	text-decoration: none;
 `;
 
@@ -25,9 +25,9 @@ export default function HomePage() {
 				<h2>Where do you want to find your guide?</h2>
 			</Main>
 			<Link href="/search">
-				<A>
+				<Anchor>
 					<Searchbar />
-				</A>
+				</Anchor>
 			</Link>
 		</>
 	);
