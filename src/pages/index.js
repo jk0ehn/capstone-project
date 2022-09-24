@@ -20,9 +20,9 @@ export default function HomePage() {
 				<h2>Where do you want to find your guide?</h2>
 			</Main>
 			<Link href="/search">
-				<div>
+				<a>
 					<Searchbar />
-				</div>
+				</a>
 			</Link>
 		</>
 	);
