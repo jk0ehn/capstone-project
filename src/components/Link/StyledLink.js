@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-const StyledLink = styled.a`
-	width: 500px;
-	max-width: 600px;
+const StyledLink = styled.div`
+	width: 100%;
+	margin: 20px;
 	padding: 15px;
 	gap: 15px;
 	border-radius: 9999px;

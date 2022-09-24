@@ -1,10 +1,16 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import styled from 'styled-components';
 
-import StyledLink from '../components/Link/StyledLink';
+import Main from '../components/Main';
+import Searchbar from '../components/Searchbar/Searchbar';
 
 const logo = '/logo.png';
+
+const Anchor = styled.a`
+	text-decoration: none;
+`;
 
 export default function HomePage() {
 	return (
@@ -13,14 +19,16 @@ export default function HomePage() {
 				<title key="title">My Cannabis Guide</title>
 				<meta key="description" name="description" content="This is my project" />
 			</Head>
-			<div>
+			<Main>
 				<h1>Find your local expert for medical cannabis</h1>
 				<Image src={logo} alt={'mycannabisguide'} width="100px" height="100px" />
-				<h2>Where do you want to find a cannabis expert?</h2>
-				<Link href="/search" passHref>
-					<StyledLink>enter search here</StyledLink>
-				</Link>
-			</div>
+				<h2>Where do you want to find your guide?</h2>
+			</Main>
+			<Link href="/search">
+				<Anchor>
+					<Searchbar />
+				</Anchor>
+			</Link>
 		</>
 	);
 }
