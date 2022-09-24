@@ -1,11 +1,16 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import styled from 'styled-components';
 
 import Main from '../components/Main';
 import Searchbar from '../components/Searchbar/Searchbar';
 
 const logo = '/logo.png';
+
+const A = styled.a`
+	text-decoration: none;
+`;
 
 export default function HomePage() {
 	return (
@@ -20,9 +25,9 @@ export default function HomePage() {
 				<h2>Where do you want to find your guide?</h2>
 			</Main>
 			<Link href="/search">
-				<a>
+				<A>
 					<Searchbar />
-				</a>
+				</A>
 			</Link>
 		</>
 	);
