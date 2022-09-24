@@ -30,7 +30,7 @@ export default function Searchbar() {
 		<Wrapper>
 			<MySearchbar>
 				<SearchRoundedIcon color="action" />
-				<MyInput placeholder="Enter your locating here" />
+				<MyInput placeholder="Enter your location here" />
 			</MySearchbar>
 		</Wrapper>
 	);
