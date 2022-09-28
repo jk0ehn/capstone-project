@@ -27,8 +27,8 @@ const CityFont = styled.div`
 	margin-top: 3px;
 	color: lightgrey;
 `;
-
-export default function ExpertCards({search}) {
+/* eslint-disable */
+export default function ExpertCards() {
 	return (
 		<>
 			<div>
