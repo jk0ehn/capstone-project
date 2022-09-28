@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import ExpertCards from '../components/Cards/ExpertCards';
+import Listing from '../components/listing';
 import Searchbar from '../components/Searchbar/Searchbar';
 
 export default function Search() {
@@ -12,6 +13,7 @@ export default function Search() {
 			</Head>
 			<Searchbar />
 			<ExpertCards />
+			<Listing />
 		</>
 	);
 }
