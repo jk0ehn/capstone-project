@@ -1,7 +1,6 @@
 import Head from 'next/head';
 
-import ExpertCards from '../components/Cards/ExpertCards';
-import Listing from '../components/listing';
+import ExpertCard from '../components/Cards/ExpertCard';
 import Searchbar from '../components/Searchbar/Searchbar';
 
 export default function Search() {
@@ -12,8 +11,7 @@ export default function Search() {
 				<meta key="description" name="description" content="About" />
 			</Head>
 			<Searchbar />
-			<ExpertCards />
-			<Listing />
+			<ExpertCard />
 		</>
 	);
 }

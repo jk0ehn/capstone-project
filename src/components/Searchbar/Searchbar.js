@@ -1,6 +1,6 @@
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
+import {useState} from 'react';
 import styled from 'styled-components';
-
 const Wrapper = styled.div`
 	display: flex;
 	justify-content: center;
@@ -26,11 +26,16 @@ const MyInput = styled.input`
 `;
 
 export default function Searchbar() {
+	const [search, setSearch] = useState('');
+	console.log(search);
 	return (
 		<Wrapper>
 			<MySearchbar>
 				<SearchRoundedIcon color="action" />
-				<MyInput placeholder="Enter your location here" />
+				<MyInput
+					onChange={event => setSearch(event.target.value)}
+					placeholder="Enter your location here"
+				/>
 			</MySearchbar>
 		</Wrapper>
 	);
