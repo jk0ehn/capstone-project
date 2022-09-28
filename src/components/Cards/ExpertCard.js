@@ -28,41 +28,47 @@ const CityFont = styled.div`
 	color: lightgrey;
 `;
 
-export default function ExpertCards() {
+export default function ExpertCards({search}) {
 	return (
 		<>
 			<div>
-				{data.map(item => (
-					<>
-						<div>
-							<Card key={item.id}>
-								<CardImage>
-									<Image
-										src="/img/avatar-female.jpg"
-										width={80}
-										height={80}
-										objectFit="cover"
-										alt="portrait"
-									/>
-								</CardImage>
+				{data
+					.filter(item => {
+						return search.toLowerCase() === ''
+							? item
+							: item.first_name.toLowerCase().includes(search);
+					})
+					.map(item => (
+						<>
+							<div>
+								<Card key={item.id}>
+									<CardImage>
+										<Image
+											src="/img/avatar-female.jpg"
+											width={80}
+											height={80}
+											objectFit="cover"
+											alt="portrait"
+										/>
+									</CardImage>
 
-								<DetailPreview>
-									<div>
-										<text>
-											{item.first_name} {item.last_name}
-										</text>
-										<br />
-										<text>{item.ident}</text>
-									</div>
+									<DetailPreview>
+										<div>
+											<text>
+												{item.first_name} {item.last_name}
+											</text>
+											<br />
+											<text>{item.ident}</text>
+										</div>
 
-									<div>
-										<CityFont>{item.city}</CityFont>
-									</div>
-								</DetailPreview>
-							</Card>
-						</div>
-					</>
-				))}
+										<div>
+											<CityFont>{item.city}</CityFont>
+										</div>
+									</DetailPreview>
+								</Card>
+							</div>
+						</>
+					))}
 			</div>
 		</>
 	);

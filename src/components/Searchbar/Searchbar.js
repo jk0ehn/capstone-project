@@ -27,12 +27,13 @@ const MyInput = styled.input`
 
 export default function Searchbar() {
 	const [search, setSearch] = useState('');
-	console.log(search);
+
 	return (
 		<Wrapper>
 			<MySearchbar>
 				<SearchRoundedIcon color="action" />
 				<MyInput
+					type={search}
 					onChange={event => setSearch(event.target.value)}
 					placeholder="Enter your location here"
 				/>
