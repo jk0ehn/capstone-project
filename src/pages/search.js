@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import {useState} from 'react';
 
-import ExpertCard from '../components/Cards/ExpertCard';
+import ExpertList from '../components/Cards/ExpertList';
 import Searchbar from '../components/Searchbar/Searchbar';
 
 export default function Search() {
@@ -18,7 +18,7 @@ export default function Search() {
 					setSearchTerm(value);
 				}}
 			/>
-			<ExpertCard searchTerm={searchTerm} />
+			<ExpertList searchTerm={searchTerm} />
 		</>
 	);
 }
