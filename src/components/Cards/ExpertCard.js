@@ -27,16 +27,16 @@ const CityFont = styled.div`
 	margin-top: 3px;
 	color: lightgrey;
 `;
-/* eslint-disable */
-export default function ExpertCards() {
+
+export default function ExpertCards({searchTerm}) {
 	return (
 		<>
 			<div>
 				{data
 					.filter(item => {
-						return search.toLowerCase() === ''
+						return searchTerm.toLowerCase() === ''
 							? item
-							: item.first_name.toLowerCase().includes(search);
+							: item.city.toLowerCase().includes(searchTerm);
 					})
 					.map(item => (
 						<>
