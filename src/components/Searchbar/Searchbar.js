@@ -1,12 +1,12 @@
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+const SearchBarWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 `;
 
-const MySearchbar = styled.div`
+const Form = styled.form`
 	display: flex;
 	flex-direction: row;
 	width: 500px;
@@ -18,20 +18,25 @@ const MySearchbar = styled.div`
 	box-shadow: 0 0 6px 1px rgba(204, 204, 204, 0.48);
 `;
 
-const MyInput = styled.input`
+const Input = styled.input`
 	width: 100%;
 	height: 100%;
 	border: none;
 	font-size: 1.1em;
 `;
 
-export default function Searchbar() {
+export default function Searchbar({searchTerm, onSearchTermChange}) {
 	return (
-		<Wrapper>
-			<MySearchbar>
+		<SearchBarWrapper>
+			<Form onSubmit={event => event.preventDefault()}>
 				<SearchRoundedIcon color="action" />
-				<MyInput placeholder="Enter your location here" />
-			</MySearchbar>
-		</Wrapper>
+				<Input
+					value={searchTerm}
+					onChange={event => onSearchTermChange(event.target.value)}
+					placeholder="Enter your location here"
+					aria-label="searchexpertbylocation"
+				/>
+			</Form>
+		</SearchBarWrapper>
 	);
 }
