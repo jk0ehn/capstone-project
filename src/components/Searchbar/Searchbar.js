@@ -6,7 +6,7 @@ const SearchBarWrapper = styled.div`
 	justify-content: center;
 `;
 
-const Form = styled.div`
+const Form = styled.form`
 	display: flex;
 	flex-direction: row;
 	width: 500px;
@@ -28,12 +28,13 @@ const Input = styled.input`
 export default function Searchbar({searchTerm, onSearchTermChange}) {
 	return (
 		<SearchBarWrapper>
-			<Form>
+			<Form onSubmit={event => event.preventDefault()}>
 				<SearchRoundedIcon color="action" />
 				<Input
 					value={searchTerm}
 					onChange={event => onSearchTermChange(event.target.value)}
 					placeholder="Enter your location here"
+					aria-label="searchexpertbylocation"
 				/>
 			</Form>
 		</SearchBarWrapper>

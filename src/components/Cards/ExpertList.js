@@ -43,35 +43,37 @@ export default function ExpertList({searchTerm}) {
 						: item.city.toLowerCase().includes(searchTerm);
 				})
 				.map(item => (
-					<>
-						<li>
-							<Card key={item.id}>
-								<ImageWrapper>
-									<Image
-										src="/img/avatar-female.jpg"
-										width={80}
-										height={80}
-										objectFit="cover"
-										alt="portrait"
-									/>
-								</ImageWrapper>
+					<li key={item.id}>
+						<Card>
+							<ImageWrapper>
+								<Image
+									src={
+										item.gender === 'Female'
+											? '/img/avatar-female.jpg'
+											: '/img/avatar-male.jpg'
+									}
+									width={80}
+									height={80}
+									objectFit="cover"
+									alt="portrait"
+								/>
+							</ImageWrapper>
 
-								<DetailPreview>
-									<div>
-										<text>
-											{item.first_name} {item.last_name}
-										</text>
-										<br />
-										<text>{item.ident}</text>
-									</div>
+							<DetailPreview>
+								<div>
+									<text>
+										{item.first_name} {item.last_name}
+									</text>
+									<br />
+									<text>{item.ident}</text>
+								</div>
 
-									<div>
-										<City>{item.city}</City>
-									</div>
-								</DetailPreview>
-							</Card>
-						</li>
-					</>
+								<div>
+									<City>{item.city}</City>
+								</div>
+							</DetailPreview>
+						</Card>
+					</li>
 				))}
 		</Ul>
 	);
