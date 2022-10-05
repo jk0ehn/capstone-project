@@ -8,7 +8,9 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	html {
+		background-color: #F5F5F5;
 		font-size: 16px;
+		
 	}
 
 	body {
