@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 import {data} from './data/data';
@@ -6,6 +7,11 @@ import {data} from './data/data';
 const Ul = styled.ul`
 	padding: 0;
 	list-style: none;
+`;
+
+const Anchor = styled.a`
+	text-decoration: none !important;
+	color: black;
 `;
 
 const Card = styled.div`
@@ -36,7 +42,7 @@ const City = styled.div`
 export default function ExpertList({searchTerm}) {
 	return (
 		<Ul>
-			{data
+			{data.experts
 				.filter(item => {
 					return searchTerm.toLowerCase() === ''
 						? item
@@ -44,35 +50,39 @@ export default function ExpertList({searchTerm}) {
 				})
 				.map(item => (
 					<li key={item.id}>
-						<Card>
-							<ImageWrapper>
-								<Image
-									src={
-										item.gender === 'Female'
-											? '/img/avatar-female.jpg'
-											: '/img/avatar-male.jpg'
-									}
-									width={80}
-									height={80}
-									objectFit="cover"
-									alt="portrait"
-								/>
-							</ImageWrapper>
+						<Link href={`/experts/${item.ident}`} passHref>
+							<Anchor>
+								<Card>
+									<ImageWrapper>
+										<Image
+											src={
+												item.gender === 'Female'
+													? '/img/avatar-female.jpg'
+													: '/img/avatar-male.jpg'
+											}
+											width={80}
+											height={80}
+											objectFit="cover"
+											alt="portrait"
+										/>
+									</ImageWrapper>
 
-							<DetailPreview>
-								<div>
-									<text>
-										{item.first_name} {item.last_name}
-									</text>
-									<br />
-									<text>{item.ident}</text>
-								</div>
+									<DetailPreview>
+										<div>
+											<text>
+												{item.first_name} {item.last_name}
+											</text>
+											<br />
+											<text>{item.ident}</text>
+										</div>
 
-								<div>
-									<City>{item.city}</City>
-								</div>
-							</DetailPreview>
-						</Card>
+										<div>
+											<City>{item.city}</City>
+										</div>
+									</DetailPreview>
+								</Card>
+							</Anchor>
+						</Link>
 					</li>
 				))}
 		</Ul>
