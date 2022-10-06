@@ -28,8 +28,8 @@ const Img = styled.div`
 	display: grid;
 	width: 150px;
 	height: 150px;
-	border-radius: 50%;
 	overflow: hidden;
+	border-radius: 50%;
 `;
 
 const TextArea = styled.p`
@@ -53,7 +53,7 @@ export default function Detail() {
 
 	return (
 		<>
-			<Header />
+			<Header first_name={expert.first_name} last_name={expert.last_name} />
 			<Section>
 				<DetailCard>
 					<Img>
@@ -67,10 +67,6 @@ export default function Detail() {
 					</Img>
 
 					<TextArea>
-						<div>
-							{expert.first_name} {expert.last_name}
-						</div>
-
 						<div>ID: {expert.ident}</div>
 
 						<div>{expert.state}</div>

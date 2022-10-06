@@ -13,10 +13,12 @@ const GreenHeader = styled.div`
 	font-size: 24px;
 `;
 
-export default function Header() {
+export default function Header(props) {
 	return (
 		<GreenHeader>
-			<div>Header</div>
+			<div>
+				{props.first_name} {props.last_name}
+			</div>
 		</GreenHeader>
 	);
 }
