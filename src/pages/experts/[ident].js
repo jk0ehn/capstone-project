@@ -9,7 +9,6 @@ import Header from '../../components/Header';
 const Section = styled.section`
 	display: flex;
 	justify-content: center;
-	background-color: grey;
 `;
 
 const DetailCard = styled.div`
@@ -22,6 +21,7 @@ const DetailCard = styled.div`
 	padding: 50px;
 	border-radius: 30px;
 	background-color: white;
+	box-shadow: 0 0 18px -2px rgba(0, 0, 0, 0.07);
 `;
 
 const Img = styled.div`
@@ -36,7 +36,7 @@ const TextArea = styled.p`
 	text-align: center;
 `;
 
-const Contact = styled.div`
+const ContactArea = styled.div`
 	display: flex;
 	justify-content: space-between;
 	height: 32px;
@@ -71,16 +71,23 @@ export default function Detail() {
 							{expert.first_name} {expert.last_name}
 						</div>
 
-						<div>{expert.ident}</div>
+						<div>ID: {expert.ident}</div>
 
+						<div>{expert.state}</div>
 						<div>{expert.city}</div>
 					</TextArea>
 
-					<Contact>
-						<button></button>
-						<button></button>
-						<button></button>
-					</Contact>
+					<ContactArea>
+						<a>
+							<button onClick={() => router.back()}>back</button>
+						</a>
+						<a href="mailto:{expert.email}">
+							<button>mail</button>
+						</a>
+						<a href="https://calendly.com/" target="_blank" rel="noreferrer">
+							<button>calender</button>
+						</a>
+					</ContactArea>
 				</DetailCard>
 			</Section>
 
