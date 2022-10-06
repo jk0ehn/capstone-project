@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const GreenHeader = styled.div`
 	display: flex;
 	position: fixed;
+	z-index: 10;
 	top: 0;
 	align-items: center;
 	justify-content: center;
@@ -11,7 +12,6 @@ const GreenHeader = styled.div`
 	background-color: #61adad;
 	color: white;
 	font-size: 24px;
-	z-index: 10;
 `;
 
 export default function Header(props) {

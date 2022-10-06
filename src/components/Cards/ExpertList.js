@@ -10,8 +10,8 @@ const Ul = styled.ul`
 `;
 
 const Anchor = styled.a`
-	text-decoration: none !important;
 	color: black;
+	text-decoration: none !important;
 `;
 
 const Card = styled.div`
