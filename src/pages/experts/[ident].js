@@ -9,31 +9,37 @@ import Header from '../../components/Header';
 const Section = styled.section`
 	display: flex;
 	justify-content: center;
-	height: 100vh;
-	padding: 200px 50px 150px 50px;
 	background-color: grey;
 `;
 
 const DetailCard = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 350px;
+	display: grid;
+	justify-content: center;
+	gap: 50px;
+	width: 275px;
+	min-height: 500px;
+	margin: 200px 50px 150px 50px;
 	padding: 50px;
 	border-radius: 30px;
 	background-color: white;
 `;
 
 const Img = styled.div`
-	width: 228px;
-	height: 228px;
-	overflow: hidden;
+	display: grid;
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
+	overflow: hidden;
 `;
 
-const TextArea = styled.text`
-	margin-top: 25px;
+const TextArea = styled.p`
 	text-align: center;
+`;
+
+const Contact = styled.div`
+	display: flex;
+	justify-content: space-between;
+	height: 32px;
 `;
 
 export default function Detail() {
@@ -53,8 +59,8 @@ export default function Detail() {
 					<Img>
 						<Image
 							src={'/img/avatar-female.jpg'}
-							width="228px"
-							height="228px"
+							width={100}
+							height={100}
 							objectFit="cover"
 							alt="ProfilePic"
 						/>
@@ -69,6 +75,12 @@ export default function Detail() {
 
 						<div>{expert.city}</div>
 					</TextArea>
+
+					<Contact>
+						<button></button>
+						<button></button>
+						<button></button>
+					</Contact>
 				</DetailCard>
 			</Section>
 
