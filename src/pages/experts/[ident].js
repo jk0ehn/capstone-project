@@ -78,9 +78,8 @@ export default function Detail() {
 					</TextArea>
 
 					<ContactArea>
-						<a>
-							<button onClick={() => router.back()}>back</button>
-						</a>
+						<button onClick={() => router.back()}>back</button>
+
 						<a href="mailto:{expert.email}">
 							<button>mail</button>
 						</a>
