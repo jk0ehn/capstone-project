@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import {useRouter} from 'next/router';
+import {BiCalendar} from 'react-icons/bi';
+import {FiArrowLeftCircle, FiMail} from 'react-icons/fi';
 import styled from 'styled-components';
 
 import {data} from '../../components/Cards/data/data';
@@ -13,11 +15,10 @@ const Section = styled.section`
 
 const DetailCard = styled.div`
 	display: grid;
-	justify-content: center;
-	gap: 50px;
+	justify-items: center;
+	gap: 25px;
 	width: 275px;
-	min-height: 500px;
-	margin: 200px 50px 150px 50px;
+	margin: 150px 50px 75px 50px;
 	padding: 50px;
 	border-radius: 30px;
 	background-color: white;
@@ -25,9 +26,8 @@ const DetailCard = styled.div`
 `;
 
 const Img = styled.div`
-	display: grid;
-	width: 150px;
-	height: 150px;
+	width: 125px;
+	height: 125px;
 	overflow: hidden;
 	border-radius: 50%;
 `;
@@ -39,7 +39,6 @@ const TextArea = styled.p`
 const ContactArea = styled.div`
 	display: flex;
 	justify-content: space-between;
-	height: 32px;
 `;
 
 export default function Detail() {
@@ -59,8 +58,8 @@ export default function Detail() {
 					<Img>
 						<Image
 							src={'/img/avatar-female.jpg'}
-							width={100}
-							height={100}
+							width={125}
+							height={125}
 							objectFit="cover"
 							alt="ProfilePic"
 						/>
@@ -68,19 +67,26 @@ export default function Detail() {
 
 					<TextArea>
 						<div>ID: {expert.ident}</div>
-
-						<div>{expert.state}</div>
 						<div>{expert.city}</div>
+						<div>{expert.state}</div>
 					</TextArea>
 
 					<ContactArea>
-						<button onClick={() => router.back()}>back</button>
+						<a>
+							<button onClick={() => router.back()}>
+								<FiArrowLeftCircle />
+							</button>
+						</a>
 
 						<a href="mailto:{expert.email}">
-							<button>mail</button>
+							<button>
+								<FiMail />
+							</button>
 						</a>
 						<a href="https://calendly.com/" target="_blank" rel="noreferrer">
-							<button>calender</button>
+							<button>
+								<BiCalendar />
+							</button>
 						</a>
 					</ContactArea>
 				</DetailCard>
