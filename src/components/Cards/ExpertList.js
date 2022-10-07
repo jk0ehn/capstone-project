@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 import {data} from './data/data';
@@ -8,13 +9,18 @@ const Ul = styled.ul`
 	list-style: none;
 `;
 
+const Anchor = styled.a`
+	color: black;
+	text-decoration: none;
+`;
+
 const Card = styled.div`
 	display: flex;
 	flex-direction: row;
-	margin: 0 50px 20px 50px;
+	margin: 0 50px 30px 50px;
 	padding: 15px;
-	border: 1px solid lightgrey;
 	border-radius: 20px;
+	background-color: white;
 `;
 
 const ImageWrapper = styled.div`
@@ -24,7 +30,9 @@ const ImageWrapper = styled.div`
 	border-radius: 50%;
 `;
 
-const DetailPreview = styled.section`
+const DetailPreview = styled.div`
+	display: flex;
+	flex-direction: column;
 	padding: 15px 0 0 30px;
 `;
 
@@ -36,7 +44,7 @@ const City = styled.div`
 export default function ExpertList({searchTerm}) {
 	return (
 		<Ul>
-			{data
+			{data.experts
 				.filter(item => {
 					return searchTerm.toLowerCase() === ''
 						? item
@@ -44,35 +52,33 @@ export default function ExpertList({searchTerm}) {
 				})
 				.map(item => (
 					<li key={item.id}>
-						<Card>
-							<ImageWrapper>
-								<Image
-									src={
-										item.gender === 'Female'
-											? '/img/avatar-female.jpg'
-											: '/img/avatar-male.jpg'
-									}
-									width={80}
-									height={80}
-									objectFit="cover"
-									alt="portrait"
-								/>
-							</ImageWrapper>
+						<Link href={`/experts/${item.ident}`} passHref>
+							<Anchor>
+								<Card>
+									<ImageWrapper>
+										<Image
+											src={
+												item.gender === 'Female'
+													? '/img/avatar-female.jpg'
+													: '/img/avatar-male.jpg'
+											}
+											width={80}
+											height={80}
+											objectFit="cover"
+											alt="portrait"
+										/>
+									</ImageWrapper>
 
-							<DetailPreview>
-								<div>
-									<text>
-										{item.first_name} {item.last_name}
-									</text>
-									<br />
-									<text>{item.ident}</text>
-								</div>
-
-								<div>
-									<City>{item.city}</City>
-								</div>
-							</DetailPreview>
-						</Card>
+									<DetailPreview>
+										<span>
+											{item.first_name} {item.last_name}
+										</span>
+										<span>{item.ident}</span>
+										<City>{item.city}</City>
+									</DetailPreview>
+								</Card>
+							</Anchor>
+						</Link>
 					</li>
 				))}
 		</Ul>
