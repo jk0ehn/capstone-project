@@ -16,7 +16,7 @@ const GreenFooter = styled.div`
 export default function Footer() {
 	return (
 		<GreenFooter>
-			<div>Find your local expert!</div>
+			<p>Find your local expert!</p>
 		</GreenFooter>
 	);
 }
