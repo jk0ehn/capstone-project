@@ -11,7 +11,8 @@ const GreenHeader = styled.span`
 	height: 90px;
 	background-color: #61adad;
 	color: white;
-	font-size: 24px;
+	font-size: 32px;
+	font-weight: 300;
 `;
 
 export default function Header(props) {

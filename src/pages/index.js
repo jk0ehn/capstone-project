@@ -13,6 +13,11 @@ const Anchor = styled.a`
 	text-decoration: none;
 `;
 
+const H1 = styled.h1`
+	font-weight: 400;
+	text-align: center;
+`;
+
 export default function HomePage() {
 	return (
 		<>
@@ -21,9 +26,11 @@ export default function HomePage() {
 				<meta key="description" name="description" content="This is my project" />
 			</Head>
 			<Main>
-				<h1>Find your local expert for medical cannabis</h1>
+				<H1>Find your local expert for medical cannabis</H1>
+
 				<Image src={logo} alt={'mycannabisguide'} width="100px" height="100px" />
-				<h2>Where do you want to find your guide?</h2>
+				<p>ananda</p>
+				<p>my cannabis guide</p>
 			</Main>
 			<Link href="/search">
 				<Anchor>
