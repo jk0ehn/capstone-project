@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 
+import Footer from '../components/Footer';
 import Main from '../components/Main';
 import Searchbar from '../components/Searchbar/Searchbar';
 
@@ -29,6 +30,8 @@ export default function HomePage() {
 					<Searchbar />
 				</Anchor>
 			</Link>
+
+			<Footer />
 		</>
 	);
 }
