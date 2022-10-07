@@ -32,7 +32,9 @@ const Img = styled.div`
 	border-radius: 50%;
 `;
 
-const TextArea = styled.p`
+const TextArea = styled.div`
+	display: flex;
+	flex-direction: column;
 	text-align: center;
 `;
 
@@ -66,9 +68,9 @@ export default function Detail() {
 					</Img>
 
 					<TextArea>
-						<div>ID: {expert.ident}</div>
-						<div>{expert.city}</div>
-						<div>{expert.state}</div>
+						<span>ID: {expert.ident}</span>
+						<span>{expert.city}</span>
+						<span>{expert.state}</span>
 					</TextArea>
 
 					<ContactArea>

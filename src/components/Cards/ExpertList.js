@@ -11,16 +11,16 @@ const Ul = styled.ul`
 
 const Anchor = styled.a`
 	color: black;
-	text-decoration: none !important;
+	text-decoration: none;
 `;
 
 const Card = styled.div`
 	display: flex;
 	flex-direction: row;
-	margin: 0 50px 20px 50px;
+	margin: 0 50px 30px 50px;
 	padding: 15px;
-	border: 1px solid lightgrey;
 	border-radius: 20px;
+	background-color: white;
 `;
 
 const ImageWrapper = styled.div`
@@ -30,7 +30,9 @@ const ImageWrapper = styled.div`
 	border-radius: 50%;
 `;
 
-const DetailPreview = styled.section`
+const DetailPreview = styled.div`
+	display: flex;
+	flex-direction: column;
 	padding: 15px 0 0 30px;
 `;
 
@@ -68,17 +70,11 @@ export default function ExpertList({searchTerm}) {
 									</ImageWrapper>
 
 									<DetailPreview>
-										<div>
-											<text>
-												{item.first_name} {item.last_name}
-											</text>
-											<br />
-											<text>{item.ident}</text>
-										</div>
-
-										<div>
-											<City>{item.city}</City>
-										</div>
+										<span>
+											{item.first_name} {item.last_name}
+										</span>
+										<span>{item.ident}</span>
+										<City>{item.city}</City>
 									</DetailPreview>
 								</Card>
 							</Anchor>
