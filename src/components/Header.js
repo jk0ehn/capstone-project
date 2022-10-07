@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const GreenHeader = styled.div`
+const GreenHeader = styled.span`
 	display: flex;
 	position: fixed;
 	z-index: 10;
@@ -17,9 +17,7 @@ const GreenHeader = styled.div`
 export default function Header(props) {
 	return (
 		<GreenHeader>
-			<div>
-				{props.first_name} {props.last_name}
-			</div>
+			{props.first_name} {props.last_name}
 		</GreenHeader>
 	);
 }
