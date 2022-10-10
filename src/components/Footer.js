@@ -7,10 +7,11 @@ const GreenFooter = styled.div`
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	height: 60px;
+	height: 70px;
 	background-color: #61adad;
 	color: white;
-	font-size: 24px;
+	font-size: 22px;
+	font-weight: 200;
 `;
 
 export default function Footer() {

@@ -1,7 +1,8 @@
+import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
+import CalendarMonthRoundedIcon from '@mui/icons-material/CalendarMonthRounded';
+import MailOutlineRoundedIcon from '@mui/icons-material/MailOutlineRounded';
 import Image from 'next/image';
 import {useRouter} from 'next/router';
-import {BiCalendar} from 'react-icons/bi';
-import {FiArrowLeftCircle, FiMail} from 'react-icons/fi';
 import styled from 'styled-components';
 
 import {data} from '../../components/Cards/data/data';
@@ -16,10 +17,10 @@ const Section = styled.section`
 const DetailCard = styled.div`
 	display: grid;
 	justify-items: center;
-	gap: 25px;
-	width: 275px;
+	gap: 60px;
+	width: 300px;
 	margin: 150px 50px 75px 50px;
-	padding: 50px;
+	padding: 30px;
 	border-radius: 30px;
 	background-color: white;
 	box-shadow: 0 0 18px -2px rgba(0, 0, 0, 0.07);
@@ -40,7 +41,13 @@ const TextArea = styled.div`
 
 const ContactArea = styled.div`
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
+	width: 100%;
+`;
+
+const ContactButton = styled.button`
+	border: none;
+	background-color: transparent;
 `;
 
 export default function Detail() {
@@ -75,20 +82,20 @@ export default function Detail() {
 
 					<ContactArea>
 						<a>
-							<button onClick={() => router.back()}>
-								<FiArrowLeftCircle />
-							</button>
+							<ContactButton onClick={() => router.back()}>
+								<ArrowBackIosRoundedIcon color="action" />
+							</ContactButton>
 						</a>
 
 						<a href="mailto:{expert.email}">
-							<button>
-								<FiMail />
-							</button>
+							<ContactButton>
+								<MailOutlineRoundedIcon color="action" />
+							</ContactButton>
 						</a>
 						<a href="https://calendly.com/" target="_blank" rel="noreferrer">
-							<button>
-								<BiCalendar />
-							</button>
+							<ContactButton>
+								<CalendarMonthRoundedIcon color="action" />
+							</ContactButton>
 						</a>
 					</ContactArea>
 				</DetailCard>

@@ -10,11 +10,18 @@ export const GlobalStyle = createGlobalStyle`
 	html {
 		background-color: #F5F5F5;
 		font-size: 16px;
-		
 	}
 
 	body {
 		margin: 0;
+		color: #5E5E5E;
+		font-family: Poppins,sans-serif;
 		font-size: 1rem;
+		
+		
 	}
+
+	
+
+
 `;
