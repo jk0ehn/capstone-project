@@ -21,14 +21,14 @@ const Form = styled.form`
 `;
 
 const Input = styled.input`
+	padding-right: 20px;
 	border: none;
+	border-radius: 999px;
 	color: #8c8c8c;
 	font-weight: 300;
-	border-radius: 999px;
-	padding-right: 20px;
 
 	&:focus {
-		outline: 3;
+		outline: 0;
 	}
 `;
 
