@@ -18,6 +18,10 @@ const Form = styled.form`
 	height: 40px;
 	border-radius: 999px;
 	background-color: white;
+
+	&:focus-within {
+		border: 2px solid blue;
+	}
 `;
 
 const Input = styled.input`

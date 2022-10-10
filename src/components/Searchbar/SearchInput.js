@@ -14,6 +14,10 @@ const Form = styled.form`
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+
+	&:focus-within {
+		outline: 2px solid red;
+	}
 `;
 
 const Input = styled.input`
