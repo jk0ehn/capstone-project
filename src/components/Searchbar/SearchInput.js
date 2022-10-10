@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 const SearchBarWrapper = styled.div`
 	display: flex;
+	z-index: 1000;
 	justify-content: center;
 	border-radius: 10px;
 	background-color: white;
-	z-index: 1000;
 `;
 
 const Form = styled.form`
