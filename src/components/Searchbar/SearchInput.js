@@ -3,50 +3,40 @@ import styled from 'styled-components';
 
 const SearchBarWrapper = styled.div`
 	display: flex;
-	position: sticky;
-	z-index: 10;
-	top: 0;
-	align-items: center;
 	justify-content: center;
-	height: 90px;
-	background-color: #61adad;
+	border-radius: 10px;
+	background-color: white;
+	z-index: 1000;
 `;
 
 const Form = styled.form`
 	display: flex;
 	flex-direction: row;
-	height: 40px;
-	border-radius: 999px;
-	background-color: white;
+	align-items: center;
+	justify-content: center;
 `;
 
 const Input = styled.input`
+	height: 50px;
 	border: none;
-	color: #8c8c8c;
-	font-weight: 300;
-	border-radius: 999px;
-	padding-right: 20px;
-
-	&:focus {
-		outline: 3;
-	}
+	background-color: transparent;
+	font-size: 14px;
 `;
 
-const IconWrap = styled.div`
+const SquareIcon = styled.div`
 	display: grid;
-	align-items: center;
+	align-content: center;
 	justify-content: center;
-	width: 40px;
-	height: 40px;
+	width: 50px;
 `;
 
-export default function Searchbar({searchTerm, onSearchTermChange}) {
+export default function SearchInput({searchTerm, onSearchTermChange}) {
 	return (
 		<SearchBarWrapper>
 			<Form onSubmit={event => event.preventDefault()}>
-				<IconWrap>
+				<SquareIcon>
 					<SearchRoundedIcon color="action" />
-				</IconWrap>
+				</SquareIcon>
 				<Input
 					value={searchTerm}
 					onChange={event => onSearchTermChange(event.target.value)}
