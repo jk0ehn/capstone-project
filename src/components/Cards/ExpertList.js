@@ -20,7 +20,6 @@ const Anchor = styled.a`
 
 const Card = styled.div`
 	display: flex;
-	flex-direction: row;
 	align-items: center;
 	margin: 0 30px 30px 30px;
 	padding: 15px;
