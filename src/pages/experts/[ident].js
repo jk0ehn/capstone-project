@@ -1,7 +1,10 @@
-import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
-import CalendarMonthRoundedIcon from '@mui/icons-material/CalendarMonthRounded';
+import CottageOutlinedIcon from '@mui/icons-material/CottageOutlined';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import ListAltOutlinedIcon from '@mui/icons-material/ListAltOutlined';
 import MailOutlineRoundedIcon from '@mui/icons-material/MailOutlineRounded';
+import {grey} from '@mui/material/colors';
 import Image from 'next/image';
+import Link from 'next/link';
 import {useRouter} from 'next/router';
 import styled from 'styled-components';
 
@@ -17,10 +20,10 @@ const Section = styled.section`
 const DetailCard = styled.div`
 	display: grid;
 	justify-items: center;
-	gap: 60px;
+	gap: 50px;
 	width: 300px;
-	margin: 150px 50px 75px 50px;
-	padding: 30px;
+	margin: 135px 50px 75px 50px;
+	padding: 50px;
 	border-radius: 30px;
 	background-color: white;
 	box-shadow: 0 0 18px -2px rgba(0, 0, 0, 0.07);
@@ -36,6 +39,8 @@ const Img = styled.div`
 const TextArea = styled.div`
 	display: flex;
 	flex-direction: column;
+	font-size: 0.9em;
+	font-weight: 200;
 	text-align: center;
 `;
 
@@ -75,26 +80,34 @@ export default function Detail() {
 					</Img>
 
 					<TextArea>
-						<span>ID: {expert.ident}</span>
+						<span>ID : {expert.ident}</span>
 						<span>{expert.city}</span>
 						<span>{expert.state}</span>
 					</TextArea>
 
 					<ContactArea>
+						<Link href="/">
+							<a>
+								<ContactButton>
+									<CottageOutlinedIcon sx={{color: grey[600]}} />
+								</ContactButton>
+							</a>
+						</Link>
 						<a>
 							<ContactButton onClick={() => router.back()}>
-								<ArrowBackIosRoundedIcon color="action" />
+								<ListAltOutlinedIcon sx={{color: grey[600]}} />
 							</ContactButton>
 						</a>
 
 						<a href="mailto:{expert.email}">
 							<ContactButton>
-								<MailOutlineRoundedIcon color="action" />
+								<MailOutlineRoundedIcon sx={{color: grey[600]}} />
 							</ContactButton>
 						</a>
-						<a href="https://calendly.com/" target="_blank" rel="noreferrer">
+
+						<a href="" rel="noreferrer">
 							<ContactButton>
-								<CalendarMonthRoundedIcon color="action" />
+								<FavoriteBorderIcon sx={{color: grey[600]}} />
 							</ContactButton>
 						</a>
 					</ContactArea>
