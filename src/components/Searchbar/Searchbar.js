@@ -1,4 +1,4 @@
-import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
+import {IoIosSearch} from 'react-icons/io';
 import styled from 'styled-components';
 
 const SearchBarWrapper = styled.div`
@@ -49,7 +49,7 @@ export default function Searchbar({searchTerm, onSearchTermChange}) {
 		<SearchBarWrapper>
 			<Form onSubmit={event => event.preventDefault()}>
 				<IconWrap>
-					<SearchRoundedIcon color="action" />
+					<IoIosSearch />
 				</IconWrap>
 				<Input
 					value={searchTerm}
