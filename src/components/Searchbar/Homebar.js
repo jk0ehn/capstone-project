@@ -12,13 +12,15 @@ const Bar = styled.div`
 	box-shadow: 0 0 18px -2px rgba(0, 0, 0, 0.07);
 `;
 
-const Input = styled.input`
+const StartButton = styled.button`
 	width: 150px;
 	border: none;
 	border-radius: 0 0 0 0;
-	&:focus {
-		outline: none;
-	}
+	background-color: transparent;
+	color: grey;
+	font-family: poppins, sans-serif;
+	font-weight: 200;
+	text-align: left;
 `;
 
 const Icon = styled.div`
@@ -34,21 +36,25 @@ const BarWrapper = styled.div`
 	justify-content: center;
 `;
 
+const Anchor = styled.a`
+	text-decoration: none;
+`;
+
 const style = {color: 'grey', fontSize: '1.5em'};
 
 export default function Homebar() {
 	return (
-		<Link href={'./search'}>
-			<a>
+		<Link href={'./search'} passHref>
+			<Anchor>
 				<BarWrapper>
 					<Bar>
 						<Icon>
 							<IoIosSearch style={style} />
 						</Icon>
-						<Input />
+						<StartButton>Start search here</StartButton>
 					</Bar>
 				</BarWrapper>
-			</a>
+			</Anchor>
 		</Link>
 	);
 }

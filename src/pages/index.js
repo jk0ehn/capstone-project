@@ -8,7 +8,7 @@ import Homebar from '../components/Searchbar/Homebar';
 
 const logo = '/logo.png';
 
-const H1 = styled.h1`
+const Headline = styled.h1`
 	margin: 0;
 	padding: 0;
 	color: #4b8f8f;
@@ -17,7 +17,7 @@ const H1 = styled.h1`
 	text-align: center;
 `;
 
-const H2 = styled.h2`
+const Title = styled.h2`
 	margin: 0;
 	padding: 0;
 	color: #839a9a;
@@ -26,7 +26,7 @@ const H2 = styled.h2`
 	text-align: center;
 `;
 
-const ImageDefinition = styled.div`
+const ImageWrapper = styled.div`
 	width: 170px;
 	margin-top: 75px;
 `;
@@ -49,11 +49,11 @@ export default function HomePage() {
 			</Head>
 			<HeaderHome></HeaderHome>
 			<Main>
-				<ImageDefinition>
+				<ImageWrapper>
 					<Image src={logo} alt={'mycannabisguide'} width="592px" height="716px" />
-				</ImageDefinition>
-				<H1>ananda</H1>
-				<H2>my cannabis guide</H2>
+				</ImageWrapper>
+				<Headline>ananda</Headline>
+				<Title>my cannabis guide</Title>
 			</Main>
 
 			<Homebar />

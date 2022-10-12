@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const GreenFooter = styled.div`
+const GreenFooter = styled.footer`
 	display: flex;
 	position: fixed;
 	bottom: 0;
