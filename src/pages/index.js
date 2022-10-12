@@ -37,7 +37,7 @@ const HeaderHome = styled.div`
 	width: 60px;
 	height: 60px;
 	border-radius: 0 0 0 30px;
-	background-color: #61adad;
+	background-color: transparent;
 `;
 
 export default function HomePage() {
