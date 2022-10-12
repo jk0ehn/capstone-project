@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 
-const GreenFooter = styled.div`
+const GreenFooter = styled.footer`
 	display: flex;
 	position: fixed;
 	bottom: 0;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	height: 70px;
+	height: 60px;
 	background-color: #61adad;
 	color: white;
-	font-size: 22px;
-	font-weight: 200;
+	font-size: 18px;
+	font-weight: 100;
 `;
 
 export default function Footer() {
