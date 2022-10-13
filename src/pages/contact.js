@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Head from 'next/head';
-// import {useState} from 'react';
 
 import Footer from '../components/Footer';
 import HeaderContact from '../components/HeaderContact';
@@ -19,8 +18,10 @@ const FormWrapper = styled.div`
 `;
 
 const SubmitButton = styled.button`
+	display: inline-block;
+	swidth: 100%;
 	height: 50px;
-	margin: 30px 5px 5px 0;
+	margin: 30px auto 0;
 	border: none;
 	border-radius: 30px;
 	background-color: #61adad;
@@ -28,19 +29,12 @@ const SubmitButton = styled.button`
 `;
 
 export default function Contact() {
-	// 	const [name, setName] = useState('');
-	// 	const [email, setEmail] = useState('');
-	// 	const [message, setMessage] = useState('');
-
-	// 	const handleSubmit = e => {
-	// 		e.preventDefault();
-	// 		const data = {
-	// 			name,
-	// 			email,
-	// 			message,
-	// 		};
-	// 		console.log(data);
-	// 	};
+	const handleSubmit = event => {
+		event.preventDefault();
+		const formdata = new FormData(event.target);
+		const data = Object.fromEntries(formdata);
+		console.log(data);
+	};
 
 	return (
 		<>
@@ -51,24 +45,26 @@ export default function Contact() {
 			<HeaderContact />
 			<FormWrapper>
 				<Box
+					onSubmit={handleSubmit}
 					component="form"
 					sx={{
-						'& > :not(style)': {m: 2, width: '20ch'},
+						'.MuiTextField-root': {m: 2, width: '20ch'},
 					}}
 					noValidate
 					autoComplete="off"
 				>
-					<TextField id="name" label="Name" variant="standard" />
-					<TextField id="email" label="Mail" variant="standard" />
+					<TextField name="name" label="Name" variant="standard" />
+					<TextField name="email" label="Mail" variant="standard" />
 					<TextField
-						id="standard-textarea"
+						name="standard-textarea"
 						label="Your Message"
 						placeholder="Placeholder"
 						multiline
 						variant="standard"
-					/>{' '}
+					/>
+
+					<SubmitButton type="submit">Send</SubmitButton>
 				</Box>
-				<SubmitButton type="submit">Send</SubmitButton>
 			</FormWrapper>
 			<Footer />
 		</>
