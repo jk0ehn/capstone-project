@@ -99,17 +99,17 @@ export default function Detail() {
 							</ContactButton>
 						</a>
 
-						<a href="mailto:{expert.email}">
+						<Link href="/contact">
 							<ContactButton>
 								<MailOutlineRoundedIcon sx={{color: grey[600]}} />
 							</ContactButton>
-						</a>
+						</Link>
 
-						<a href="" rel="noreferrer">
+						<Link>
 							<ContactButton>
 								<FavoriteBorderIcon sx={{color: grey[600]}} />
 							</ContactButton>
-						</a>
+						</Link>
 					</ContactArea>
 				</DetailCard>
 			</Section>
