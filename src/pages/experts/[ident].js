@@ -105,11 +105,11 @@ export default function Detail() {
 							</ContactButton>
 						</Link>
 
-						<Link>
+						<a>
 							<ContactButton>
 								<FavoriteBorderIcon sx={{color: grey[600]}} />
 							</ContactButton>
-						</Link>
+						</a>
 					</ContactArea>
 				</DetailCard>
 			</Section>
