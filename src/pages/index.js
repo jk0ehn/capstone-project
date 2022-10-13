@@ -1,6 +1,6 @@
+import styled from '@emotion/styled';
 import Head from 'next/head';
 import Image from 'next/image';
-import styled from 'styled-components';
 
 import Footer from '../components/Footer';
 import Main from '../components/Main';

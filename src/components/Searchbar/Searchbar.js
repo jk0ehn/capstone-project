@@ -1,5 +1,5 @@
+import styled from '@emotion/styled';
 import {IoIosSearch} from 'react-icons/io';
-import styled from 'styled-components';
 
 const SearchBarWrapper = styled.div`
 	display: flex;
