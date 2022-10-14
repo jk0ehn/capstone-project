@@ -13,7 +13,7 @@ const Headline = styled.h1`
 	padding: 0;
 	color: #4b8f8f;
 	font-size: 36px;
-	font-weight: 300;
+	font-weight: 400;
 	text-align: center;
 `;
 
@@ -22,7 +22,7 @@ const Title = styled.h2`
 	padding: 0;
 	color: #839a9a;
 	font-size: 14px;
-	font-weight: 100;
+	font-weight: 200;
 	text-align: center;
 `;
 

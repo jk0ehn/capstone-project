@@ -29,7 +29,7 @@ const Input = styled.input`
 	border: none;
 	border-radius: 999px;
 	color: #8c8c8c;
-	font-weight: 300;
+	font-weight: 200;
 
 	&:focus {
 		outline: 0;

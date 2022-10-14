@@ -9,7 +9,7 @@ import {data} from './data/data';
 const Ul = styled.ul`
 	padding: 0;
 	font-size: 14px;
-	font-weight: 300;
+	font-weight: 200;
 	list-style: none;
 `;
 

@@ -18,6 +18,31 @@ export const globalStyle = css`
 		font-family: Poppins, sans-serif;
 		font-size: 1rem;
 	}
+	@font-face {
+		font-family: Poppins;
+		font-weight: 100;
+		src: url('/fonts/poppins-thin.ttf') format('truetype');
+	}
+	@font-face {
+		font-family: Poppins;
+		font-weight: 200;
+		src: url('/fonts/poppins-light.ttf') format('truetype');
+	}
+	@font-face {
+		font-family: Poppins;
+		font-weight: 300;
+		src: url('/fonts/poppins-medium.ttf') format('truetype');
+	}
+	@font-face {
+		font-family: Poppins;
+		font-weight: 400;
+		src: url('/fonts/poppins-regular.ttf') format('truetype');
+	}
+	@font-face {
+		font-family: Poppins;
+		font-weight: 500;
+		src: url('/fonts/poppins-bold.ttf') format('truetype');
+	}
 `;
 
 export function GlobalStyle() {
