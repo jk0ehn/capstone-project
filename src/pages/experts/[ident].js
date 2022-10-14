@@ -1,3 +1,4 @@
+import styled from '@emotion/styled';
 import CottageOutlinedIcon from '@mui/icons-material/CottageOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ListAltOutlinedIcon from '@mui/icons-material/ListAltOutlined';
@@ -6,7 +7,6 @@ import {grey} from '@mui/material/colors';
 import Image from 'next/image';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
-import styled from 'styled-components';
 
 import {data} from '../../components/Cards/data/data';
 import Footer from '../../components/Footer';
@@ -99,13 +99,13 @@ export default function Detail() {
 							</ContactButton>
 						</a>
 
-						<a href="mailto:{expert.email}">
+						<Link href="/contact">
 							<ContactButton>
 								<MailOutlineRoundedIcon sx={{color: grey[600]}} />
 							</ContactButton>
-						</a>
+						</Link>
 
-						<a href="" rel="noreferrer">
+						<a>
 							<ContactButton>
 								<FavoriteBorderIcon sx={{color: grey[600]}} />
 							</ContactButton>

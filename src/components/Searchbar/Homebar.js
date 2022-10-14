@@ -1,6 +1,6 @@
+import styled from '@emotion/styled';
 import Link from 'next/link';
 import {IoIosSearch} from 'react-icons/io';
-import styled from 'styled-components';
 
 const Bar = styled.div`
 	display: flex;

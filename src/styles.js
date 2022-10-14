@@ -1,6 +1,6 @@
-import {createGlobalStyle} from 'styled-components';
+import {Global, css} from '@emotion/react';
 
-export const GlobalStyle = createGlobalStyle`
+export const globalStyle = css`
 	*,
 	*::before,
 	*::after {
@@ -8,20 +8,18 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	html {
-		background-color: #F5F5F5;
+		background-color: #f5f5f5;
 		font-size: 16px;
 	}
 
 	body {
 		margin: 0;
-		color: #5E5E5E;
-		font-family: Poppins,sans-serif;
+		color: #5e5e5e;
+		font-family: Poppins, sans-serif;
 		font-size: 1rem;
-		
-		
 	}
-
-	
-
-
 `;
+
+export function GlobalStyle() {
+	return <Global styles={globalStyle} />;
+}

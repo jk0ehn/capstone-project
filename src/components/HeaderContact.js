@@ -15,10 +15,10 @@ const GreenHeader = styled.span`
 	font-weight: 300;
 `;
 
-export default function Header(props) {
+export default function Header() {
 	return (
 		<GreenHeader>
-			{props.first_name} {props.last_name}
+			<p>Contact</p>
 		</GreenHeader>
 	);
 }
