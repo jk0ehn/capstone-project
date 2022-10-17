@@ -1,9 +1,8 @@
 import styled from '@emotion/styled';
-import CottageOutlinedIcon from '@mui/icons-material/CottageOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ListAltOutlinedIcon from '@mui/icons-material/ListAltOutlined';
 import MailOutlineRoundedIcon from '@mui/icons-material/MailOutlineRounded';
-import {grey} from '@mui/material/colors';
+import {green, grey} from '@mui/material/colors';
 import Image from 'next/image';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
@@ -86,18 +85,9 @@ export default function Detail() {
 					</TextArea>
 
 					<ContactArea>
-						<Link href="/">
-							<a>
-								<ContactButton>
-									<CottageOutlinedIcon sx={{color: grey[600]}} />
-								</ContactButton>
-							</a>
-						</Link>
-						<a>
-							<ContactButton onClick={() => router.back()}>
-								<ListAltOutlinedIcon sx={{color: grey[600]}} />
-							</ContactButton>
-						</a>
+						<ContactButton onClick={() => router.back()}>
+							<ListAltOutlinedIcon sx={{color: grey[600]}} />
+						</ContactButton>
 
 						<Link href="/contact">
 							<ContactButton>
@@ -105,11 +95,13 @@ export default function Detail() {
 							</ContactButton>
 						</Link>
 
-						<a>
-							<ContactButton>
+						<ContactButton>
+							{FavoriteBorderIcon ? (
 								<FavoriteBorderIcon sx={{color: grey[600]}} />
-							</ContactButton>
-						</a>
+							) : (
+								<FavoriteBorderIcon sx={{color: green[600]}} />
+							)}
+						</ContactButton>
 					</ContactArea>
 				</DetailCard>
 			</Section>

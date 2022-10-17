@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Head from 'next/head';
+import Link from 'next/link';
 
 import Footer from '../components/Footer';
 import HeaderContact from '../components/HeaderContact';
@@ -62,8 +63,9 @@ export default function Contact() {
 						multiline
 						variant="standard"
 					/>
-
-					<SubmitButton type="submit">Send</SubmitButton>
+					<Link href="/close">
+						<SubmitButton type="submit">Send</SubmitButton>
+					</Link>
 				</Box>
 			</FormWrapper>
 			<Footer />
