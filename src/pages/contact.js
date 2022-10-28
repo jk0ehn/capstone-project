@@ -59,7 +59,7 @@ export default function Contact() {
 					<TextField
 						name="standard-textarea"
 						label="Your Message"
-						placeholder="Placeholder"
+						placeholder="Leave a message"
 						multiline
 						variant="standard"
 					/>
