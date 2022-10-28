@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
-import CottageOutlinedIcon from '@mui/icons-material/CottageOutlined';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ListAltOutlinedIcon from '@mui/icons-material/ListAltOutlined';
 import MailOutlineRoundedIcon from '@mui/icons-material/MailOutlineRounded';
 import {grey} from '@mui/material/colors';
 import Image from 'next/image';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
+import {useState} from 'react';
+import {AiOutlineHeart} from 'react-icons/ai';
 
 import {data} from '../../components/Cards/data/data';
 import Footer from '../../components/Footer';
@@ -59,6 +59,11 @@ export default function Detail() {
 	const router = useRouter();
 	const ident = router.query.ident;
 	const expert = data.experts.find(event => event.ident === ident);
+	const [color, setColor] = useState('grey');
+
+	function Toggle() {
+		setColor(color === 'grey' ? 'green' : 'red');
+	}
 
 	if (!ident) {
 		return <p>no number found</p>;
@@ -86,18 +91,9 @@ export default function Detail() {
 					</TextArea>
 
 					<ContactArea>
-						<Link href="/">
-							<a>
-								<ContactButton>
-									<CottageOutlinedIcon sx={{color: grey[600]}} />
-								</ContactButton>
-							</a>
-						</Link>
-						<a>
-							<ContactButton onClick={() => router.back()}>
-								<ListAltOutlinedIcon sx={{color: grey[600]}} />
-							</ContactButton>
-						</a>
+						<ContactButton onClick={() => router.back()}>
+							<ListAltOutlinedIcon sx={{color: grey[600]}} />
+						</ContactButton>
 
 						<Link href="/contact">
 							<ContactButton>
@@ -105,11 +101,13 @@ export default function Detail() {
 							</ContactButton>
 						</Link>
 
-						<a>
-							<ContactButton>
-								<FavoriteBorderIcon sx={{color: grey[600]}} />
-							</ContactButton>
-						</a>
+						<ContactButton onClick={Toggle}>
+							<AiOutlineHeart style={{fontSize: 24, color: '#757575'}} />
+						</ContactButton>
+
+						{/* <ContactButton onClick={Toggle}>
+							<AiFillHeart style={{fontSize: 24, color: '#61adad'}} />
+						</ContactButton> */}
 					</ContactArea>
 				</DetailCard>
 			</Section>
