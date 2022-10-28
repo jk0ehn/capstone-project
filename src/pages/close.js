@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import ClearIcon from '@mui/icons-material/Clear';
-import Lottie from 'lottie-react';
+import Lottie, {useLottieInteractivity} from 'lottie-react';
 import Link from 'next/link';
 
 import thx from '../lotties/thx.json';
@@ -35,7 +35,7 @@ export default function Close() {
 				</Position>
 			</Link>
 			<Frame>
-				<Lottie animationData={thx} loop={stop} />
+				<Lottie animationData={thx} loop={useLottieInteractivity} />
 			</Frame>
 		</Main>
 	);
